@@ -36,12 +36,14 @@ pip install tensorflow librosa numpy moviepy streamlit
 ```
 
 3. **Ensure folder structure matches:**
+```
 ufc_crowd_classifier/
 ├── data/                 # ignored in Git
 ├── clips_raw/            # ignored in Git
 ├── notebooks/train_model.ipynb
 ├── streamlit_app/app.py
 └── README.md
+```
 
 ---
 
@@ -62,39 +64,41 @@ streamlit run app.py
 ---
 
 ## How It Works: Audio Pipeline
+```
 Audio File (any duration)
-↓
+        ↓
 Load with librosa
-↓
+        ↓
 Convert to Mel Spectrogram (128 × variable width)
-↓
+        ↓
 Resize to 128 × 128 (TensorFlow)
-↓
+        ↓
 Feed to CNN Model
-↓
+        ↓
 Prediction: Highlight or Non-Highlight
+```
 
 ---
 
 ## CNN Architecture
 
 **Input:** 128×128×1 mel spectrogram
+```
 Conv2D(32, 3×3) → ReLU → MaxPool(2×2) → BatchNorm
-↓
+        ↓
 Conv2D(64, 3×3) → ReLU → MaxPool(2×2) → BatchNorm
-↓
+        ↓
 Conv2D(128, 3×3) → ReLU → MaxPool(2×2) → BatchNorm
-↓
+        ↓
 Flatten → Dense(128) → ReLU → Dropout(0.5)
-↓
+        ↓
 Dense(64) → ReLU → Dropout(0.3)
-↓
+        ↓
 Dense(1) → Sigmoid → Output (0 or 1)
+```
 
 **Output:** 0 → Non-Highlight, 1 → Highlight
 
 ---
 
 
-- If the app predicts everything as non-highlight, try using clips **~20 seconds long**.
-- Close other programs using the clip files to avoid **file-locking errors** in Windows.
