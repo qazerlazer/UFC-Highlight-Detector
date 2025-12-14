@@ -59,7 +59,7 @@ streamlit run app.py
 1. Upload a UFC clip (audio or video).
 2. Audio is extracted (if video), converted to a **Mel spectrogram**, and resized to **128×128**.
 3. Spectrogram is fed into the **CNN model**.
-4. Prediction displayed: **Highlight (🔥)** or **Non-Highlight (😐)**.
+4. Prediction displayed: **Highlight** or **Non-Highlight**.
 
 ---
 
