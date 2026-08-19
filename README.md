@@ -1,12 +1,12 @@
 # UFC Highlight Detection
 
-Detects UFC fight highlights using **audio-based machine learning**. Users can upload an audio or video clip, and the app predicts whether it contains a highlight based on crowd reaction and commentary energy.
+Detects UFC fight highlights using **audio based machine learning**. Users can upload an audio or video clip, and the app predicts whether it contains a highlight based on crowd reaction and commentary energy.
 
 ---
 
 ## Description
 
-This project uses a **Convolutional Neural Network (CNN)** trained on **mel spectrograms** extracted from UFC fight clips to classify moments as **highlight** or **non-highlight**. The pipeline converts audio to spectrograms, resizes them to a fixed input size, and feeds them to the CNN model. The model is deployed via **Streamlit**, allowing real-time predictions for uploaded clips. The CNN architecture and audio processing pipeline are designed to handle clips of **any duration**, with **~85% accuracy** on test data.
+This project uses a **Convolutional Neural Network (CNN)** trained on **mel spectrograms** extracted from UFC fight clips to classify moments as **highlight** or **non-highlight**. The pipeline converts audio to spectrograms, resizes them to a fixed input size, and feeds them to the CNN model. The model is deployed via **Streamlit**. The CNN architecture and audio processing pipeline are designed to handle clips of **any duration**, with **~85% accuracy** on test data.
 
 ---
 
