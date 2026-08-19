@@ -26,7 +26,7 @@ This project uses a **Convolutional Neural Network (CNN)** trained on **mel spec
 
 1. **Clone this repository:**
 ```bash
-git clone https://github.com/YOUR_USERNAME/ufc-highlight-detector.git
+git clone https://github.com/qazerlazer/ufc-highlight-detector.git
 cd ufc_crowd_classifier
 ```
 
@@ -38,7 +38,7 @@ pip install tensorflow librosa numpy moviepy streamlit
 3. **Ensure folder structure matches:**
 ```
 ufc_crowd_classifier/
-├── data/                 # ignored in Git
+├── data/                 
 ├── clips_raw/            # ignored in Git
 ├── notebooks/train_model.ipynb
 ├── streamlit_app/app.py
